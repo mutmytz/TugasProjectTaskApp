@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_marginTop="31dp"
+        android:layout_marginStart="23dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/logo_android"
+            android:layout_width="35dp"
+            android:layout_height="25dp"/>
+        <TextView
+            android:text="Task Management"
+            android:layout_marginStart="4.37dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_tugas"
+        android:layout_marginTop="97dp"
+        android:paddingStart="23dp"
+        android:paddingEnd="23dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_tugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

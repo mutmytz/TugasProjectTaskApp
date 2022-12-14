@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/click_task"
+    android:layout_width="match_parent"
+    android:layout_height="91dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="15dp"
+    app:cardElevation="5dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="13dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title_task"
+                    android:maxWidth="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginEnd="7dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="judul tugas" />
+                <TextView
+                    android:id="@+id/task_category"
+                    android:background="@drawable/bg_text_round"
+                    android:paddingStart="3dp"
+                    android:maxWidth="200dp"
+                    android:paddingEnd="3dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="7sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="Tidak penting tidak mendesak" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/task_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="7sp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="12dp"
+                android:maxLines="6"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_light"
+                android:text="sssssssssssssssss"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_options"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="17dp"
+        android:src="@drawable/ic_opsi"
+        android:layout_width="20dp"
+        android:layout_height="10dp"/>
+</androidx.cardview.widget.CardView>

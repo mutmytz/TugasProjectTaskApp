@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navi"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.D121201064.TaskApp.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editTaskFragment"
+            app:destination="@id/editTaskFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailTaskFragment"
+            app:destination="@id/detailTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.D121201064.TaskApp.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_detailTaskFragment"
+            app:destination="@id/detailTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editTaskFragment"
+        android:name="com.D121201064.TaskApp.fragments.EditTaskFragment"
+        android:label="fragment_edit_task"
+        tools:layout="@layout/fragment_edit_task" >
+        <action
+            android:id="@+id/action_editTaskFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.D121201064.TaskApp.model.Task" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTaskFragment"
+        android:name="com.D121201064.TaskApp.fragments.DetailTaskFragment"
+        android:label="fragment_detail_task"
+        tools:layout="@layout/fragment_detail_task" >
+        <action
+            android:id="@+id/action_detailTaskFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.D121201064.TaskApp.model.Task" />
+        <action
+            android:id="@+id/action_detailTaskFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+</navigation>
